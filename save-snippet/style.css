@@ -1,0 +1,142 @@
+body {
+    background-color: #232323;
+}
+
+#selecting-mode-section {
+    background-color: #232323;
+}
+
+#editor {
+    height: 300px;
+    background-color: #000;
+    color: #d1d5db;
+    border-radius: 14px;
+
+    border: 2px solid #3f3451;
+}
+
+#code-sprint {
+    background-color: black;
+}
+
+.comments {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.comments-place {
+    height: 120px;
+    width: 790px;
+    background-color: black;
+    border: 2px solid #3f3451;
+    border-radius: 14px;
+}
+
+.comments-heading-section {
+    margin-left: 300px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: white;
+}
+
+.tags-section {
+    height: 200px;
+    width: 500px;
+
+    margin-top: 30px;
+}
+
+.tags-section h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: white;
+}
+
+.tags-button {
+    height: 130px;
+    width: 100%;
+
+    border: 2px solid #3f3451;
+}
+
+.tags-button-section-1 {
+    height: 65px;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.tags-button-section-2 {
+    height: 65px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.tags-button-1 {
+    height: 30px;
+    width: 130px;
+    border: 2px solid white;
+    border-radius: 6px;
+    background-color: #d6cece;
+    color: black;
+    font-weight: 600;
+}
+
+.form-select {
+    padding: 5px;
+    width: 180px;
+    border-radius: 8px;
+    border: 2px solid #3f3451;
+    background-color: black;
+    color: white;
+}
+
+#inlineFormSelectPref {
+    margin-left: 20px;
+}
+
+.public-private-button {
+    margin-right: 20px;
+}
+
+.code-section-heading {
+    color: white;
+    margin-left: -55px;
+    font-weight: 600;
+}
+
+i {
+    margin-right: 5px;
+}
+
+.select-mode {
+    color: #d1d5db;
+    font-weight: 40;
+}
+
+.share-button button {
+    margin-top: 28px;
+    margin-left: 200px;
+    width: 100px;
+    height: 35px;
+    background-color: black;
+    color: white;
+    border: 2px solid #3f3451;
+    border-radius: 8px;
+}

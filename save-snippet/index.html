@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="codemirror-5.65.9/lib/codemirror.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="codemirror-5.65.9/mode/python/python.js"></script>
+
+    <script src="codemirror-5.65.9/lib/codemirror.js"></script>
+    <script src="codemirror-5.65.9/mode/clike/clike.js"></script>
+    <link rel="stylesheet" href="codemirror-5.65.9/theme/dracula.css" />
+    <script src="codemirror-5.65.9/addon/edit/closebrackets.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+
+    <style>
+      body {
+        font-size: 20px;
+      }
+
+      h1,
+      ul,
+      li,
+      a,
+      i {
+        color: white;
+        font-size: 20px;
+      }
+      .header-top {
+        margin-top: 20px;
+      }
+      .logo {
+        max-width: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="header-top flex justify-center">
+      <nav class="self-center w-full max-w-7xl">
+        <div class="flex flex-col lg:flex-row justify-around items-center">
+          <h1
+            style="font-size: 24px"
+            class="logo uppercase pl-5 py-4 text-lg font-sans font-bold"
+          >
+            Snippet <span class="hub">Hub</span>
+          </h1>
+          <ul
+            class="hidden lg:flex items-center text-[18px] font-semibold pl-32"
+          >
+            <li
+              class="hover:underline underline-offset-4 decoration-2 decoration-white py-2 rounded-lg px-5"
+            >
+              <a href="#">Home</a>
+            </li>
+            <li
+              class="hover:underline underline-offset-4 decoration-2 decoration-white py-2 rounded-lg px-5"
+            >
+              <a href="#">Contact</a>
+            </li>
+            <li
+              class="hover:underline underline-offset-4 decoration-2 decoration-white py-2 rounded-lg px-5"
+            >
+              <a href="#">Services</a>
+            </li>
+            <li
+              class="hover:underline underline-offset-4 decoration-2 decoration-white py-2 rounded-lg px-5"
+            >
+              <a href="#">About</a>
+            </li>
+            <li
+              class="hover:underline underline-offset-4 decoration-2 decoration-white py-2 rounded-lg px-5"
+            >
+              <a href="#">Pricing</a>
+            </li>
+          </ul>
+          <div class="text-center text-base pr-5 inline-flex">
+            <a
+              href="#"
+              class="w-8 h-8 inline-block rounded-full pt-[6px] hover:text-blue-500"
+              ><i class="fa fa-twitter"></i
+            ></a>
+            <a
+              href="#"
+              class="w-8 h-8 inline-block rounded-full pt-[5px] hover:text-blue-500"
+              ><i class="fa fa-instagram"></i
+            ></a>
+            <a
+              href="#"
+              class="w-8 h-8 inline-block rounded-full pt-[5px] hover:text-blue-500"
+              ><i class="fa fa-facebook"></i
+            ></a>
+            <a
+              href="#"
+              class="w-8 h-8 inline-block rounded-full pt-[5px] hover:text-blue-500"
+              ><i class="fa fa-google"></i
+            ></a>
+            <a
+              href="#"
+              class="w-8 h-8 inline-block rounded-full pt-[5px] hover:text-blue-500"
+              ><i class="fa fa-linkedin"></i
+            ></a>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://use.fontawesome.com/03f8a0ebd4.js"></script>
+
+    <div class="row m-3">
+      <div class="col">
+        <div class="d-flex justify-content-between mb-2 rounded p-2">
+          <div class="col-12 w-25">
+            <label class="visually-hidden" for="inlineFormSelectPref"
+              >Preference</label
+            >
+            <select class="form-select" id="inlineFormSelectPref">
+              <option selected>Select language..</option>
+              <option value="Java">Java</option>
+              <option value="Cpp">Cpp</option>
+              <option value="Python">Python</option>
+            </select>
+          </div>
+
+          <h3 class="code-section-heading">
+            <i
+              class="fa-regular fa-bookmark fa-xs"
+              style="color: #ffffff; margin-top: 1.5px"
+            ></i>
+            Save your Snippets
+          </h3>
+
+          <!-- public - private button -->
+          <select
+            class="form-select public-private-button"
+            id="inlineFormSelectPref"
+          >
+            <option selected><p class="select-mode">Select Mode..</p></option>
+            <option value="public">Public</option>
+            <option value="private">Private</option>
+            <option value="freemium">Freemium</option>
+          </select>
+        </div>
+        <!-- text area -->
+        <textarea
+          type="text"
+          id="editor"
+          class="form-control"
+          aria-label="First name"
+          placeholder="Add your code here .."
+        ></textarea>
+      </div>
+
+      <div class="comments">
+        <div class="comments-heading">
+          <h3 class="comments-heading-section">
+            <i
+              class="fa-regular fa-comment fa-flip-horizontal fa-sm"
+              style="color: #ffffff"
+            ></i>
+            Comment
+          </h3>
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            class="comments-place"
+            placeholder="  Add your comments here ..."
+          ></textarea>
+        </div>
+        <!-- <textarea
+          name=""
+          id=""
+          cols="30"
+          rows="10"
+          class="comments-place"
+        ></textarea> -->
+        <div class="tags-section">
+          <h2>
+            <i class="fa-solid fa-hashtag fa-sm" style="color: #ffffff"></i>Tags
+          </h2>
+          <!-- <div class="tags-button">
+            <div class="tags-button-section-1">
+              <button class="tags-button-1">b1</button>
+              <button class="tags-button-1">b2</button>
+            </div>
+            <div class="tags-button-section-2">
+              <button class="tags-button-1">b3</button>
+              <button class="tags-button-1">b4</button>
+              <button class="tags-button-1">b5</button>
+            </div>
+          </div> -->
+          <!-- Tag section code -->
+          <!DOCTYPE html>
+          <html lang="en">
+            <head>
+              <meta charset="UTF-8" />
+              <meta
+                name="viewport"
+                content="width=device-width, initial-scale=1.0"
+              />
+              <!-- <link rel="stylesheet" href="style.css" /> -->
+              <title>Tag Section</title>
+              <style>
+                .tag-container {
+                  width: 300px;
+                  margin-top: -10px;
+                }
+
+                .tags {
+                  display: flex;
+                  /* flex-direction: row; */
+                  flex-wrap: wrap;
+                  gap: 5px;
+                  margin-bottom: 10px;
+                }
+
+                .tag {
+                  margin-left: 100px;
+                  background-color: black;
+                  color: white;
+                  padding: 5px 10px;
+                  border-radius: 6px;
+                  cursor: pointer;
+                }
+
+                input[type="text"] {
+                  width: 100%;
+                  padding: 8px;
+                  margin-top: 12px;
+                  border: 2px solid #3f3451;
+                  border-radius: 5px;
+                  color: white;
+                }
+                .tag-container input::placeholder {
+                  color: #d1d5db;
+                  font-weight: 100;
+                }
+                .tag-input-box {
+                  margin-left: 100px;
+                  background-color: black;
+                  color: white;
+                }
+              </style>
+            </head>
+            <body>
+              <div class="tag-container">
+                <div class="tags" id="tags"></div>
+                <input
+                  type="text"
+                  id="tagInput"
+                  placeholder="Add a tag .."
+                  class="tag-input-box"
+                />
+              </div>
+              <div class="share-button"><button>Share</button></div>
+              <script>
+                const tagContainer = document.getElementById("tags");
+                const tagInput = document.getElementById("tagInput");
+
+                tagInput.addEventListener("keyup", function (event) {
+                  if (event.key === "Enter" && tagInput.value !== "") {
+                    const tag = document.createElement("div");
+                    tag.classList.add("tag");
+                    tag.innerText = tagInput.value;
+                    tag.addEventListener("click", function () {
+                      tag.remove();
+                    });
+                    tagContainer.appendChild(tag);
+
+                    tagInput.value = "";
+                  }
+                });
+              </script>
+            </body>
+          </html>
+
+          <!-- Tag section code end -->
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    var editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
+      mode: "text/x-c++src",
+      theme: "dracula",
+      lineNumbers: true,
+      autoCloseBrackets: true,
+    });
+    var width = window.innerWidth;
+    var input = document.getElementById("input");
+    var output = document.getElementById("output");
+    var run = document.getElementById("run");
+    editor.setSize(0.7 * width, "500");
+    var option = document.getElementById("inlineFormSelectPref");
+    option.addEventListener("change", function () {
+      if (option.value == "Java") {
+        editor.setOption("mode", "text/x-java");
+      } else if (option.value == "python") {
+        editor.setOption("mode", "text/x-python");
+      } else {
+        editor.setOption("mode", "text/x-c++src");
+      }
+    });
+    var code;
+    run.addEventListener("click", async function () {
+      code = {
+        code: editor.getValue(),
+        input: input.value,
+        lang: option.value,
+      };
+      console.log(code);
+      var oData = await fetch("http://localhost:8000/compile", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(code),
+      });
+      var d = await oData.json();
+      output.value = d.output;
+    });
+  </script>
+</html>
